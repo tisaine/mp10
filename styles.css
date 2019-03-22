@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu|Fira+Sans');
+
+body {
+    background-image: url("KampusAlatKartalla.png");
+    background-size: cover;
+}
+
+#viirit {
+    width: 100%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: Arial;
+    border-right: solid 1px;
+}
+
+.sininennav h5{
+    color: #0086cf;
+}
+
+.keltainennav h5{
+    color: #fba500;
+}
+
+.violettinav h5{
+    color: #d30071;
+}
+
+.oranssinav h5{
+    color: #ff5a00;
+}
+
+.sidenav h5 {
+    font-size: xx-large;
+    margin: 10px;
+}
+
+.sidenav h6 {
+    font-size: medium;
+    margin: 10px;
+}
+
+.sidenav p {
+    font-size: small;
+    margin: 10px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#banneri-left {
+    width: 100%;
+    z-index: 2;
+}
+
+#banneri-right {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    z-index: -0.5;
+}
+
+header {
+    width: 97%;
+    z-index: -1;
+    display: inline-block;
+    margin: 1vw;
+}
+
+.button1 {
+    width: 24.625%;
+    float: left;
+    height: 40px;
+    text-align: center;
+    background-color: #f99d1b;
+    padding: 0;
+    border-radius: 2px;
+    border: none;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+}
+
+.oranssi {
+    background-color: #ff5a00;
+}
+
+.violetti {
+    background-color: #d30071;
+}
+
+.sininen {
+    background-color: #0086cf;
+}
+
+.keltainen{
+    background-color: #fba500;
+}
+.buttonfirst {
+    margin-right: 0.5%;
+}
+
+.button1:hover {
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.24), 0 5px 20px 0 rgba(0,0,0,0.10);
+}
+
+#banneri {
+    background-color: #f99d1b;
+    height: 183px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    //#f99d1b
+}
+
+h1,
+h4 {
+    font-family: 'Baloo Tammudu', cursive;
+    font-size: 5vw;
+    margin: 0;
+    padding-bottom: 0;
+    height: 7vw;
+}
+
+h2 {
+    margin: 10px 0 0 0;
+    text-align: left;
+    font-family: Arial;
+    color: #686a6f;
+    font-size: medium;
+}
+
+h4 {
+    font-size: 1.7vw;
+    height: 2.4vw;
+    padding-top: 1vw;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5vw;
+}
+
+.active {
+    text-decoration: underline;
+    color: orange;
+}
+
+/* video styles for desktop layout */
+
+.video-selection {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
+
+.video-container {
+    display: inline-block;
+    vertical-align: middle;
+    width: 68%;
+}
+
+.video {
+    width: 90%;
+    margin: 1vw;
+    height: 13vw;
+    display: inline-block;
+//background: black;
+    vertical-align: middle;
+}
+
+.video-container .video {
+    width: 100%;
+    height: 43vw;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.playerElement2-ContextMenu {
+    padding-left: 0.5em;
+}
+
+/* video styles for mobile layout */
+
+@media screen and (max-width: 800px) {
+    .video-selection {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+    }
+
+    .button1 {
+        font-weight: bold;
+        font-size: small;
+    }
+
+    h2{
+        font-size: small;
+    }
+
+    .video-container {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+        padding-top: 1vw;
+    }
+
+    .video {
+        width: 96%;
+        margin: 1%;
+        height: 46vw;
+        display: inline-block;
+    //background: black;
+        vertical-align: middle;
+    }
+
+    .video-container .video {
+        width: 96%;
+        height: 46vw;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+.click-for-timetable {
+    position: absolute;
+    right: 25vw;
+    top: 1vw;
+    background: white;
+    border-radius: 10vw;
+    text-align: center;
+    padding-top: 2vw;
+    box-sizing: inherit;
+    z-index: 4;
+    width: 11vw;
+    height: 9vw;
+    cursor: pointer;
+}
+
+.click-for-timetable:before {
+    content: '';
+    position: absolute;
+    background: white;
+    right: -1vw;
+    top: 3.8vw;
+    width: 3vw;
+    height: 3vw;
+    transform: rotate(45deg);
+}
+
+.click-for-timetable p {
+    z-index: 5;
+}
+
+.timetable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 4vw;
+    overflow-y: scroll;
+    z-index: 4;
+    width: 65vw;
+    height: 50vw;
+    padding: 3vw;
+}
+
+.close {
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    font-family: sans-serif;
+    font-size: 4vw;
+    border: solid 0.2vw black;
+    border-radius: 5vw;
+    height: 5vw;
+    width: 5vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close:hover,
+.click-for-timetable:hover {
+    box-shadow: 0 0 2vw;
+}
+
+
+/* kissa */
+.metka-cat {
+    display: block;
+    position: absolute;
+    background: #ff5a00;
+    right: 6vw;
+    top: 1vw;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 0 100%;
+    transform: rotate(-40deg);
+    box-shadow: 0 0.4vw 2vw rgba(0, 0, 0, 0.4);
+}
+
+.metka-cat:after,
+.metka-cat:before {
+    content: '';
+    position: absolute;
+    background: #ff5a00;
+    right: -2vw;
+    top: 7vw;
+    width: 6vw;
+    height: 5vw;
+    border-radius: 0 100%;
+    transform: rotate(-40deg);
+}
+
+.metka-cat:before {
+    right: 6.5vw;
+    top: -2vw;
+    width: 5vw;
+    height: 6vw;
+    border-radius: 0 100%;
+    transform: rotate(40deg);
+}
+
+.eye {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: white;
+    right: 8vw;
+    top: 3vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 0 100%;
+    box-shadow: 5vw 5vw 0 0 white;
+}
+
+.eye:after {
+    content: '';
+    position: absolute;
+    background: black;
+    animation: movingEyes 5s infinite;
+    -webkit-animation: movingEyes 5s infinite;
+    right: -0w;
+    top: 0vw;
+    width: 1.6vw;
+    height: 1.6vw;
+    border-radius: 100%;
+    box-shadow: 5vw 5vw 0 0 black;
+}
+
+.mouth {
+    display: block;
+    position: absolute;
+    background: black;
+    border-radius: 0 0 10vw 10vw;
+    width: 2vw;
+    height: 1vw;
+    top: 7.5vw;
+    right: 7vw;
+    transform: rotate(40deg);
+}
+
+/*animate*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes movingEyes {
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin: 1vw;
+    }
+
+    100% {
+        margin: 0;
+    }
+}
+
+/* Standard syntax */
+@keyframes movingEyes {
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin: 1vw;
+    }
+
+    100% {
+        margin: 0;
+    }
+}

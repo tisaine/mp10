@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Metropolia 10v</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<header>
+    <img id="banneri-left" src="banneri2.png">
+
+    <button id="arabiabtn" class="buttonfirst button1 keltainen" onclick="openArabia()">Arabia</button>
+    <button id="leppavaarabtn" class="buttonfirst button1 violetti" onclick="openLeppavaara()">Leppävaara</button>
+    <button id="myllypurobtn" class="buttonfirst button1 sininen" onclick="openMyllypuro()">Myllypuro</button>
+    <button id="myyrmakibtn" class="button1 oranssi" onclick="openMyyrmaki()">Myyrmäki</button>
+</header>
+
+<div class="video-selection">
+    <div id="playerElement2" class="video"></div>
+    <div id="playerElement3" class="video"></div>
+    <div id="playerElement4" class="video"></div>
+</div>
+<div class="video-container">
+    <div id="playerElement1" class="video"></div>
+</div>
+<img id="viirit" src="viirit_oranssi.png">
+
+<div id="arabia" class="sidenav keltainennav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeArabia()">&times;</a>
+        <h5>Arabia aikataulu</h5>
+        <h6 class="navteksti1">14:00</h6><p class="navteksti">Live-musiikkia, Metropolian musiikin opiskelijat</p>
+        <h6 class="navteksti1">14:10</h6><p class="navteksti">Juhlan avaus ja kampusjohtajan tervehdys</p>
+        <h6 class="navteksti1">14:30</h6><p class="navteksti">Toimitusjohtaja-rehtori Riitta Konkolan tervehdys (Arabia)</p>
+        <h6 class="navteksti1">14:40</h6><p class="navteksti">Ministeri Sanni Grahn-Laasosen puhe</p>
+        <h6 class="navteksti1">15:00</h6><p class="navteksti">Streetdance-esitys, Sensum-tanssiryhmä</p>
+        <h6 class="navteksti1">15:10</h6><p class="navteksti">Ohjelmanumero, ZONE</p>
+        <h6 class="navteksti1">15:20</h6><p class="navteksti">STREAM: Riskiryhmä-improvisaatioryhmä (Leppävaara)</p>
+        <h6 class="navteksti1">15:40</h6><p class="navteksti">STREAM: Jokeri Pokeri Box (Myyrmäki)</p>
+        <h6 class="navteksti1">16:00</h6><p class="navteksti">STREAM: Jarkko Tamminen (Myllypuro)</p>
+        <h6 class="navteksti1">17:00</h6><p class="navteksti2">Juhla päättyy</p>
+</div>
+
+<div id="leppavaara" class="sidenav violettinav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeLeppavaara()">&times;</a>
+        <h5>Leppävaara aikataulu</h5>
+        <h6 class="navteksti1">14:00</h6><p class="navteksti">Live-musiikkia, Metropolian musiikin opiskelijat</p>
+        <h6 class="navteksti1">14:10</h6><p class="navteksti">Juhlan avaus ja kampusjohtajan tervehdys</p>
+        <h6 class="navteksti1">14:30</h6><p class="navteksti">STREAM: Toimitusjohtaja-rehtorin tervehdys (Arabia)</p>
+        <h6 class="navteksti1">14:40</h6><p class="navteksti">STREAM: Ministerin puhe (Arabia)</p>
+        <h6 class="navteksti1">15:00</h6><p class="navteksti">Sirkusesitys, Pukinmäen Sirkuskoulu</p>
+        <h6 class="navteksti1">15:10</h6><p class="navteksti">Ohjelmanumero, ZONE</p>
+        <h6 class="navteksti1">15:20</h6><p class="navteksti">Riskiryhmä-improvisaatioryhmä</p>
+        <h6 class="navteksti1">15:40</h6><p class="navteksti">STREAM: Jokeri Pokeri Box (Myyrmäki)</p>
+        <h6 class="navteksti1">16:00</h6><p class="navteksti">STREAM: Jarkko Tamminen (Myllypuro)</p>
+        <h6 class="navteksti1">17:00</h6><p class="navteksti2">Juhla päättyy</p>
+</div>
+
+<div id="myyrmaki" class="sidenav oranssinav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMyyrmaki()">&times;</a>
+        <h5>Myyrmäki<br> aikataulu</h5>
+        <h6 class="navteksti1">14:00</h6><p class="navteksti">Live-musiikkia, Metropolian musiikin opiskelijat</p>
+        <h6 class="navteksti1">14:10</h6><p class="navteksti">Juhlan avaus ja kampusjohtajan tervehdys</p>
+        <h6 class="navteksti1">14:30</h6><p class="navteksti">STREAM: Toimitusjohtaja-rehtorin tervehdys (Arabia)</p>
+        <h6 class="navteksti1">14:40</h6><p class="navteksti">STREAM: Ministerin puhe (Arabia)</p>
+        <h6 class="navteksti1">15:00</h6><p class="navteksti">Innovaatio- ja johtamisprofessori Alf Rehnin puheenvuoro, auditorio</p>
+        <h6 class="navteksti1">15:10</h6><p class="navteksti">Ohjelmanumero, ZONE</p>
+        <h6 class="navteksti1">15:20</h6><p class="navteksti">STREAM: Riskiryhmä-improvisaatioryhmä (Leppävaara)</p>
+        <h6 class="navteksti1">15:30</h6><p class="navteksti">Kummiluokan tervehdys</p>
+        <h6 class="navteksti1">15:40</h6><p class="navteksti">Jokeri Pokeri Box</p>
+        <h6 class="navteksti1">16:00</h6><p class="navteksti">STREAM: Jarkko Tamminen (Myllypuro)</p>
+        <h6 class="navteksti1">17:00</h6><p class="navteksti2">Juhla päättyy</p>
+</div>
+
+<div id="myllypuro" class="sidenav sininennav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMyllypuro()">&times;</a>
+        <h5>Myllypuro<br> aikataulu</h5>
+        <h6 class="navteksti1">14:00</h6><p class="navteksti">Live-musiikkia, Metropolian musiikin opiskelijat</p>
+        <h6 class="navteksti1">14:10</h6><p class="navteksti">Juhlan avaus ja kampusjohtajan tervehdys</p>
+        <h6 class="navteksti1">14:30</h6><p class="navteksti">STREAM: Toimitusjohtaja-rehtorin tervehdys (Arabia)</p>
+        <h6 class="navteksti1">14:40</h6><p class="navteksti">STREAM: Ministerin puhe (Arabia)</p>
+        <h6 class="navteksti1">15:10</h6><p class="navteksti">Ohjelmanumero, ZONE</p>
+        <h6 class="navteksti1">15:20</h6><p class="navteksti">STREAM: Riskiryhmä-improvisaatioryhmä (Leppävaara)</p>
+        <h6 class="navteksti1">15:40</h6><p class="navteksti">STREAM: Jokeri Pokeri Box (Myyrmäki)</p>
+        <h6 class="navteksti1">16:00</h6><p class="navteksti">Jarkko Tamminen</p>
+        <h6 class="navteksti1">17:00</h6><p class="navteksti2">Juhla päättyy</p>
+</div>
+
+
+<script>
+    function openArabia() {
+        document.getElementById("arabia").style.width = "300px";
+        document.getElementById("arabia").style.borderRightColor = "#fba500";
+    }
+
+    function closeArabia() {
+        document.getElementById("arabia").style.width = "0";
+    }
+    function openLeppavaara() {
+        document.getElementById("leppavaara").style.width = "300px";
+        document.getElementById("arabia").style.borderRightColor = "#d30071";
+    }
+
+    function closeLeppavaara() {
+        document.getElementById("leppavaara").style.width = "0";
+    }
+    function openMyyrmaki() {
+        document.getElementById("myyrmaki").style.width = "300px";
+        document.getElementById("arabia").style.borderRightColor = "#ff5a00";
+    }
+
+    function closeMyyrmaki() {
+        document.getElementById("myyrmaki").style.width = "0";
+
+    }
+    function openMyllypuro() {
+        document.getElementById("myllypuro").style.width = "300px";
+        document.getElementById("arabia").style.borderRightColor = "#0086cf";
+    }
+
+    function closeMyllypuro() {
+        document.getElementById("myllypuro").style.width = "0";
+    }
+
+</script>
+</body>
+
+<script src="app.js"></script>
+
+</html>
